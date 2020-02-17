@@ -1,0 +1,1 @@
+float commission(float sales);
