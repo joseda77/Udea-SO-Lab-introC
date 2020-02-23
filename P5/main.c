@@ -1,17 +1,16 @@
 #include <stdio.h>
-#include <progression.h>
-
+#include <series.h>
 
 void main(){
     double number1; // numero a leer
     double number2;
-    double result = 0;
+    float result = 0;
     printf("Ingrese un X:");
     scanf("%le", &number1);
-    printf("Ingrese un N:");
+    printf("Ingrese el número de terminos:");
     scanf("%le", &number2);
-    result = progression(number1, number2);
+    result = series(number1, number2);
     printf("\n");
-    printf("Este es su resultado: %d", (int)result);
+    printf("Este es el resultado de las series: %f", (float)result);
     printf("\n");
 }
