@@ -1,1 +1,1 @@
-int multiplication(int number);
+void multiplication(int number);

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int multiplication(int number){
+void multiplication(int number){
     int flag = 0;
     for(int i=0; i<= number; i++){
         for (int j=0; j <= number; j++){
@@ -8,5 +8,5 @@ int multiplication(int number){
             printf("%dX%d=%d, ",i, j, total);
         }
     }
-    return 0;
+    printf("\n");
 }
