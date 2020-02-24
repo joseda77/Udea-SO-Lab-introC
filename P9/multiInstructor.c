@@ -46,7 +46,7 @@ void generate_question()
     int number1;
     int number2;
     int result;
-    int entry = -10;
+    int entry;
     int message;
     int well = 0;
     int bad = 0;
@@ -56,13 +56,18 @@ void generate_question()
     {
         number1 = generar_aleatorios(1, 10);
         number2 = generar_aleatorios(1, 10);
-        printf("¿Cuanto es %d por %d? o ingresa una letra para finalizar \n", number1, number2);
+        printf("¿Cuanto es %d por %d? o ingresa una letra para finalizar: \n", number1, number2);
+        entry = -10;
         scanf("%d", &entry);
         if (entry == -10)
         {
-            printf("El porcentaje de respuestas correctas fue de %d porciento \n", 0);
-            printf("Por favor pídele ayuda al instructor");
-            return;
+            porcentage = (double)well / (double)(well + bad);
+                printf("El porcentaje de respuestas correctas fue de %f porciento\n", porcentage*100);
+                if (porcentage < 0.75)
+                {
+                    printf("Por favor pídele ayuda al instructor \n");
+                }
+                return;
         }
         result = number1 * number2;
         while (result != entry)
@@ -92,7 +97,7 @@ void generate_question()
                 printf("El porcentaje de respuestas correctas fue de %f porciento\n", porcentage*100);
                 if (porcentage < 0.75)
                 {
-                    printf("Por favor pídele ayuda al instructor");
+                    printf("Por favor pídele ayuda al instructor \n");
                 }
                 return;
             }
